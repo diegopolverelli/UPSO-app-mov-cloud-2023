@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Ajax con Axios</h2>
+
+    <button onclick="cargarUsuarios()">Cargar Usuarios</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const cargarUsuarios = async () => {
+            let respuesta = await axios.get('https://reqres.in/api/users?page=2', {
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+
+            console.log(respuesta)
+            let divUsuarios = document.createElement('div')
+            let divHtml = ''
+
+            respuesta.data.data.forEach(usuario => {
+                divHtml = divHtml + `<hr><p>${usuario.first_name} ${usuario.last_name}</p>`
+                divHtml += `<img src="${usuario.avatar}">`
+            })
+
+            console.log(divHtml)
+            divUsuarios.innerHTML = divHtml
+            document.body.append(divUsuarios)
+
+        }
+
+
+    </script>
+</body>
+
+</html>

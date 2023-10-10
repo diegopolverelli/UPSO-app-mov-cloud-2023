@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="titulo">Ajax con XMLHttpRequest</h2>
+    <p id="subtitulo"></p>
+    <button onclick="cargarUsuarios()">Cargar Usuarios</button>
+    <button onclick="console.log('hola')">Saluda</button>
+
+    <script>
+        const cargarUsuarios = () => {
+            let xhr = new XMLHttpRequest()
+            xhr.open('get', 'https://reqres.in/api/users?page=2')
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.setRequestHeader('Authorization', 'Bearer token...')
+            xhr.onload = function () {
+                console.log(xhr)
+                if (xhr.status === 200) {
+                    let respuesta = JSON.parse(xhr.response)
+                    console.log(respuesta)
+                    console.log(respuesta.data)
+
+                    let divUsuarios = document.createElement('div')
+                    let divHtml = ''
+
+                    respuesta.data.forEach(usuario => {
+                        divHtml = divHtml + `<hr><p>${usuario.first_name} ${usuario.last_name}</p>`
+                        divHtml += `<img src="${usuario.avatar}">`
+                    })
+
+                    console.log(divHtml)
+                    divUsuarios.innerHTML = divHtml
+                    document.body.append(divUsuarios)
+
+                    // let titulo=document.getElementById('titulo')
+                    // console.log(titulo.innerHTML)
+                    // titulo.innerHTML='Prueba <strong>Ajax</strong> con ...'
+                    // let subtitulo=document.getElementById('subtitulo')
+                    // subtitulo.innerHTML='Prueba <strong>Ajax</strong> con ...'
+
+
+                } else {
+                    console.log('Error en la petición')
+                }
+
+            }
+            xhr.send()
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

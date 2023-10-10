@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Ajax con Fetch</h2>
+
+    <button onclick="cargarUsuarios()">Cargar Usuarios</button>
+
+    <script>
+        const cargarUsuarios = async () => {
+
+            try {
+                let respuesta = await fetch('https://reqres.in/api/users?page=2', {
+                method: 'get',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                // body:{}
+            })//.then(dato=>console.log(dato))
+            console.log(respuesta)
+
+            let datos = await respuesta.json()
+            console.log(datos)
+
+            let divUsuarios = document.createElement('div')
+            let divHtml = ''
+
+            datos.data.forEach(usuario => {
+                divHtml = divHtml + `<hr><p>${usuario.first_name} ${usuario.last_name}</p>`
+                divHtml += `<img src="${usuario.avatar}">`
+            })
+
+            console.log(divHtml)
+            divUsuarios.innerHTML = divHtml
+            document.body.append(divUsuarios)
+
+
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
