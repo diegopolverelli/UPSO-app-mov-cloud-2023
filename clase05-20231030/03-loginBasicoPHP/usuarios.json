@@ -1,0 +1,44 @@
+[
+    {
+        "id": "24",
+        "nombre": "Maximiliano",
+        "email": "maxi@test.com",
+        "password": "$2y$12$CbmVRnh7PVprnBcm4vLzreC8O6awflfe\/eBr1\/7..0tcseEq3lPd6"
+    },
+    {
+        "id": "25",
+        "nombre": "Diego",
+        "email": "diegopolverelli@hotmail.com",
+        "password": "$2y$12$EPInFfWGnIExD94K9CVrW.zeMawrkYoz1pnEZ0XrIVBqm1\/HaC7ca"
+    },
+    {
+        "id": "28",
+        "nombre": "Pablo",
+        "email": "plampone@test.com",
+        "password": "$2y$12$h\/R85.ow0I.au8zoUhBknec5m0g3QIOBzEsphcRqRvY2N4KBL2tsy"
+    },
+    {
+        "id": "29",
+        "nombre": "Diego",
+        "email": "diegopolverelli20@hotmail.com",
+        "password": "$2y$12$DPV61AdI3g7AkEsap0WMNO26r1jXPMlo0XYSxWqwwBlJHhUGSDw\/O"
+    },
+    {
+        "id": "30",
+        "nombre": "Diego",
+        "email": "diegopolverelli30@hotmail.com",
+        "password": "$2y$12$Fpm72DRcth2e6Zm18ck2mO5zN7BybW7E0D5FTDklyTk6O.4BEm6Zq"
+    },
+    {
+        "id": "31",
+        "nombre": "Diego",
+        "email": "diegopolverelli400@hotmail.com",
+        "password": "$2y$12$koIvJ56epuxYrT.f7q1IA.3MdVOGnQwDqtUoN1cqV3mEE50cRKlsm"
+    },
+    {
+        "id": "32",
+        "nombre": "Emilio",
+        "email": "eravena@test.com",
+        "password": "$2y$12$T6BzaYRPHQDOCUSHh6qG9OZoZkMhthncLUr9.dxoRAM9HWVxut0D6"
+    }
+]

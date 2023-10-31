@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "Diego",
+        "email": "diegopolverelli@hotmail.com",
+        "password": "$2y$12$AFaiN5MdVJObfskQc5ntAuAd7qPps3CNaHitdO5WK5kPj2mE\/dcNi"
+    },
+    {
+        "id": 2,
+        "nombre": "Diego",
+        "email": "diegopolverelli10@hotmail.com",
+        "password": "$2y$12$XmXYDwTGtIO8sjz6BreP3uVSp\/WjwArlJaJHcxwvTcfT6OEJQJ6nG"
+    },
+    {
+        "id": 3,
+        "nombre": "Mario",
+        "email": "msantos@test.com",
+        "password": "$2y$12$8D8prNeadEKglQK1SHbWF.dFQCNyAcznl6qeeZ3OW40.aF6VUkLp6"
+    }
+]
